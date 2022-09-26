@@ -5,6 +5,8 @@ const express = require('express'); //express
 const connectDB = require('./config/db'); //Database
 const app = express(); //app instance
 
+var routes = require('./routes/api/books');
+app.use('/books', routes);
 // connect to the database
 connectDB();
 
